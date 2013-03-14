@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+}
+
+#game {
+	position: relative;
+	width: 940px;
+	height: 490px;
+}
+
+.tile {
+	cursor: pointer;
+	background: #EEE;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-top: 1px solid #555;
+	border-left: 1px solid #555;
+}
+
+.tile:hover {
+	background: #FFF;
+	background: -webkit-linear-gradient(#FFF, #EEE);
+	background: -moz-linear-gradient(#FFF, #EEE);
+	background: -o-linear-gradient(#FFF, #EEE);
+}
+
+.tile .placement {
+	font-weight: bold;
+	line-height: 1
+}
