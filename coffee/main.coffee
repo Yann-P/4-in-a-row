@@ -4,7 +4,6 @@ $(document).ready ->
 
 	newGame = (size, alignSize) ->
 		if window.game
-			console.log "a"
 			game.clear()
 			$('.tile').die('click')
 
@@ -34,11 +33,11 @@ $(document).ready ->
 		alignSize = parseInt($("input[name='align-size']").val())
 
 		if isNaN(size) or isNaN(alignSize)
-			$('#state').addClass('alert-error').text("Les données entrées ne sont pas valides.")
+			$('#state').addClass('alert-error').text("Invalid values.")
 		else if size < 3
-			$('#state').addClass('alert-error').text("La grille ne peut pas être plus petite qu'une grille de morpion !")
+			$('#state').addClass('alert-error').text("The grid can't be so small.")
 		else if size < alignSize
-			$('#state').addClass('alert-error').text("L'alignement est trop grand par rapport à la taille de la grille !")
+			$('#state').addClass('alert-error').text("Alignment can't be smaller than the grid size.")
 		else if size > 40
-			$('#state').addClass('alert-error').text("La grille est trop grande !")
+			$('#state').addClass('alert-error').text("The grid can't be so large.")
 		else newGame(size, alignSize)

@@ -39,7 +39,7 @@ class window.Renderer
 	changeState: (state) ->
 		$('#state').removeClass('alert-error').removeClass('alert-info').removeClass('alert-success')
 		switch state
-			when "DEFAULT"	  then $('#state').addClass('alert-info').text("Bon jeu !")
-			when "PLAYER-WIN" then $('#state').addClass('alert-success').text("Vous avez battu l'IA, félicitations !")
-			when "IA-WIN" 	  then $('#state').text("L'IA a gagné... retentez votre chance !")
-			when "DRAW" 	  then $('#state').addClass('alert-info').text("Match nul !")
+			when "DEFAULT"	  then $('#state').addClass('alert-info').text("Good luck !")
+			when "PLAYER-WIN" then $('#state').addClass('alert-success').text("Congratulations !")
+			when "IA-WIN" 	  then $('#state').text("You lost...")
+			when "DRAW" 	  then $('#state').addClass('alert-info').text("Draw.")
